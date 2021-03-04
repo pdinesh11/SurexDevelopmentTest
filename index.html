@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body ng-app="canadianApp">
+    <div class="container" ng-controller="phoneCtrl">
+        <h2>User form</h2>
+        <form name="myForm">
+            <div class="form-group">
+                <label for="txtPhoneNumber">Phone number:</label>
+                <input type="text" class="form-control" id="txtPhoneNumber" ng-model="telephone"
+                    placeholder="Enter Phone Number" name="txtPhoneNumber" canadaphone>
+            </div>
+            <span>Phone number is {{telephone}}</span>
+            <span class="error" ng-show="myForm.txtPhoneNumber.$error.telephone">Invalid Phone Number</span>
+        </form>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/phoneController.js"></script>
+    <script src="scripts/directives/canada_phone.js"></script>
+</body>
+</html>
